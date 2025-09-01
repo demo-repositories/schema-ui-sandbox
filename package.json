@@ -4,7 +4,7 @@
   "private": true,
   "description": "Schema UI Sandbox - A pnpm workspace with Next.js app and shared packages",
   "scripts": {
-    "dev": "pnpm -r dev",
+    "dev": "concurrently \"pnpm --filter ./apps/next dev\" \"pnpm --filter ./apps/studio dev\"",
     "build": "pnpm -r build",
     "start": "pnpm -r start",
     "lint": "pnpm -r lint",
@@ -23,5 +23,8 @@
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
   }
 }

@@ -12,7 +12,7 @@ import {presentationTool} from 'sanity/presentation'
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import {schema} from './schemaTypes'
 import {resolve} from './presentation/resolve'
-import {structure} from './structure'
+import {structure, defaultDocumentNode} from './structure'
 import {codeInput} from '@sanity/code-input'
 
 // Define the actions that should be available for singleton documents
@@ -45,7 +45,7 @@ export default defineConfig({
         : input,
   },
   plugins: [
-    structureTool({structure}),
+    structureTool({structure, defaultDocumentNode}),
     presentationTool({
       previewUrl: {
         origin,

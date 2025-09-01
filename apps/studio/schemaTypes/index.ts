@@ -8,7 +8,7 @@ import faq from './documents/faq'
 import testimonial from './documents/testimonial'
 import navigation from './documents/navigation'
 import settings from './documents/settings'
-
+import email from './documents/email'
 // Schema UI shared objects
 import blockContent from './blocks/shared/block-content'
 import link from './blocks/shared/link'
@@ -51,6 +51,7 @@ export const schema: {types: SchemaTypeDefinition[]} = {
     testimonial,
     navigation,
     settings,
+    email,
     // shared objects
     blockContent,
     link,
